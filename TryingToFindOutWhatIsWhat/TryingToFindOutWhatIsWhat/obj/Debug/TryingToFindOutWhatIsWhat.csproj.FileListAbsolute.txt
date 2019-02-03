@@ -1,0 +1,7 @@
+D:\MyC#\TryingToFindOutWhatIsWhat\TryingToFindOutWhatIsWhat\bin\Debug\TryingToFindOutWhatIsWhat.exe.config
+D:\MyC#\TryingToFindOutWhatIsWhat\TryingToFindOutWhatIsWhat\bin\Debug\TryingToFindOutWhatIsWhat.exe
+D:\MyC#\TryingToFindOutWhatIsWhat\TryingToFindOutWhatIsWhat\bin\Debug\TryingToFindOutWhatIsWhat.pdb
+D:\MyC#\TryingToFindOutWhatIsWhat\TryingToFindOutWhatIsWhat\obj\Debug\TryingToFindOutWhatIsWhat.csprojResolveAssemblyReference.cache
+D:\MyC#\TryingToFindOutWhatIsWhat\TryingToFindOutWhatIsWhat\obj\Debug\TryingToFindOutWhatIsWhat.csproj.CoreCompileInputs.cache
+D:\MyC#\TryingToFindOutWhatIsWhat\TryingToFindOutWhatIsWhat\obj\Debug\TryingToFindOutWhatIsWhat.exe
+D:\MyC#\TryingToFindOutWhatIsWhat\TryingToFindOutWhatIsWhat\obj\Debug\TryingToFindOutWhatIsWhat.pdb
