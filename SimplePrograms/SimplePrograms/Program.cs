@@ -10,6 +10,7 @@ namespace SimplePrograms
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("Martin's Big Giveaway");
             Console.WriteLine("Choose a door : 1,2,3");
             string userValue = Console.ReadLine();
@@ -29,6 +30,15 @@ namespace SimplePrograms
             {
                 Console.WriteLine("We don't understand");                 
             }
+            */
+            Console.WriteLine("Martin's Big Giveaway");
+            Console.WriteLine("Choose a door : 1, 2 or 3");
+            string userValue = Console.ReadLine();
+            string message = (userValue == "1") ? "boat" : "humburger";
+            Console.Write("You won a ");
+            Console.Write(message);
+            Console.Write(".");
+
         }
     }
 }
