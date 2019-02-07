@@ -10,21 +10,25 @@ namespace SimplePrograms
     {
         static void Main(string[] args)
         {
-            /*void Method()
-             {
-                 int i = 300000000, j = 10;
-                 i++;
-                 ++j;
-                 Console.WriteLine(i);
-                 j++;
-                 Console.WriteLine(j);
-             }
-             Method(); */
-            Console.WriteLine("What is your name ");
-            Console.Write("What is your firstname");
-            string MyFirstName;
-            MyFirstName = Console.ReadLine();
-            Console.WriteLine("hello" + MyFirstName);
+            Console.WriteLine("Martin's Big Giveaway");
+            Console.WriteLine("Choose a door : 1,2,3");
+            string userValue = Console.ReadLine();
+            if (userValue == "1")
+            {
+                Console.WriteLine("You won a new car");
+            }
+            else if (userValue == "2")
+            {
+                Console.WriteLine("You won a new house");
+            }
+            else if(userValue=="3")
+            {
+                Console.WriteLine("You are a looser");
+            }
+            else
+            {
+                Console.WriteLine("We don't understand");                 
+            }
         }
     }
 }
