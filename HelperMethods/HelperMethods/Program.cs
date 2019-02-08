@@ -17,13 +17,15 @@ namespace HelperMethods
             string LastName = Console.ReadLine();
             Console.WriteLine("Where were you born");
             string Country = Console.ReadLine();
-            string reversedFirstName = ReverseString(FirstName);
-            string reversedLastName = ReverseString(LastName);
-            string reversedCountry = ReverseString(Country);
-            Console.Write(String.Format("{0}{1}{2}", reversedCountry, reversedFirstName, reversedLastName));
-           
+            DisplayResult(ReverseString(FirstName), ReverseString(LastName), ReverseString(Country));
+
         }
-        static private string ReverseString(string Sentence)
+        private static void DisplayResult(string reversedFirstName, string reversedLastName, string reversedCountry)
+        {
+            
+            Console.Write(String.Format("{0} {1} {2}", reversedFirstName, reversedLastName,reversedCountry));
+        }
+        private static string ReverseString(string Sentence)
         {
             char[] sentence = Sentence.ToCharArray();
             Array.Reverse(sentence);
