@@ -17,21 +17,18 @@ namespace HelperMethods
             string LastName = Console.ReadLine();
             Console.WriteLine("Where were you born");
             string Country = Console.ReadLine();
-            ReverseString(FirstName);
-            ReverseString(LastName);
-            ReverseString(Country);
+            string reversedFirstName = ReverseString(FirstName);
+            string reversedLastName = ReverseString(LastName);
+            string reversedCountry = ReverseString(Country);
+            Console.Write(String.Format("{0}{1}{2}", reversedCountry, reversedFirstName, reversedLastName));
+           
         }
-        static private void ReverseString(string Sentence)
+        static private string ReverseString(string Sentence)
         {
             char[] sentence = Sentence.ToCharArray();
             Array.Reverse(sentence);
-            string result = "";
-            foreach (var item in sentence)
-            {
-                result += item;
-            }
-            result += " ";
-            Console.Write(result);
+            return String.Concat(sentence);
+            
         }
 
     }
