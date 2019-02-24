@@ -17,48 +17,64 @@ namespace MergeSort
                 myArray[i] = Convert.ToInt32(Console.ReadLine());
             }
 
-            sort(myArray);
+            MergeSort(myArray, 0, myArray.Length - 1);
 
             foreach (var item in myArray)
             {
                 Console.WriteLine(item);
             }
         }
-        public static void sort<T>(T[] a)
-        where T : IComparable<T>
+        static public void MergeSort(int[] input, int startIndex, int endIndex)
         {
-            sort(a, 0, a.Length);
+            int mid;
+
+            if (endIndex > startIndex)
+            {
+                mid = (endIndex + startIndex) / 2;
+                MergeSort(input, startIndex, mid);
+                MergeSort(input, (mid + 1), endIndex);
+                Merge(input, startIndex, (mid + 1), endIndex);
+            }
         }
 
-        public static void sort<T>(T[] a, int low, int high)
-            where T : IComparable<T>
+        static public void Merge(int[] input, int left, int mid, int right)
         {
-            int N = high - low;
-            if (N <= 1)
-                return;
+            //Merge procedure takes theta(n) time
+            int[] temp = new int[input.Length];
+            int i, leftEnd, lengthOfInput, tmpPos;
+            leftEnd = mid - 1;
+            tmpPos = left;
+            lengthOfInput = right - left + 1;
 
-            int mid = low + N / 2;
-
-            sort(a, low, mid);
-            sort(a, mid, high);
-
-            T[] aux = new T[N];
-            int i = low, j = mid;
-            for (int k = 0; k < N; k++)
+            //selecting smaller element from left sorted array or right sorted array and placing them in temp array.
+            while ((left <= leftEnd) && (mid <= right))
             {
-                if (i == mid)
-                    aux[k] = a[j++];
-                else if 
-                    (j == high) aux[k] = a[i++];
-                else if 
-                    (a[j].CompareTo(a[i]) < 0) aux[k] = a[j++];
+                if (input[left] <= input[mid])
+                {
+                    temp[tmpPos++] = input[left++];
+                }
                 else
-                    aux[k] = a[i++];
+                {
+                    temp[tmpPos++] = input[mid++];
+                }
+            }
+            //placing remaining element in temp from left sorted array
+            while (left <= leftEnd)
+            {
+                temp[tmpPos++] = input[left++];
             }
 
-            for (int k = 0; k < N; k++)
+            //placing remaining element in temp from right sorted array
+            while (mid <= right)
             {
-                a[low + k] = aux[k];
+                temp[tmpPos++] = input[mid++];
+            }
+
+            //placing temp array to input
+            for (i = 0; i < lengthOfInput; i++)
+            {
+                input[right] = temp[right];
+                right--;
             }
         }
     }
