@@ -16,28 +16,35 @@ namespace BubbleSort
                 Console.Write("myArrayitem [{0}] = ", i);
                 myArray[i] = Convert.ToInt32(Console.ReadLine());
             }
-            int length = myArray.Length;
+
+            BubbleSort(myArray);
+
+            foreach (var item in myArray)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        static void BubbleSort(int[] Array)
+        {
+            int length = Array.Length;
             while (length != 0)
             {
 
-                for (int i = 0; i < myArray.Length - 1; i++)
+                for (int i = 0; i < Array.Length - 1; i++)
                 {
 
-                    if (myArray[i] > myArray[i + 1])
+                    if (Array[i] > Array[i + 1])
                     {
-                        int a = myArray[i + 1];
-                        myArray[i + 1] = myArray[i];
-                        myArray[i] = a;
+                        int a = Array[i + 1];
+                        Array[i + 1] = Array[i];
+                        Array[i] = a;
 
                     }
 
 
                 }
                 length = length - 1;
-            }
-            foreach (var item in myArray)
-            {
-                Console.WriteLine(item);
             }
         }
     }
